@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "355874570305",
+    "project_id": "crop-mate-9d514",
+    "storage_bucket": "crop-mate-9d514.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355874570305:android:802579d3b94c0fa7a6c6c0",
+        "android_client_info": {
+          "package_name": "com.example.cropmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4R47MCs1tf__IyRg4xcTrmYmLksTn2xc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
