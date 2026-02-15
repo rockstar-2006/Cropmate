@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">ಕ್ರಾಪ್ ಮೇಟ್</string>
+    <string name="title_dashboard">ಸ್ಮಾರ್ಟ್ ಮಣ್ಣಿನ ಸಲಹೆಗಾರ</string>
+    <string name="system_ready">ಸಿಸ್ಟಮ್ ಸಿದ್ಧವಾಗಿದೆ</string>
+    <string name="welcome_message">ಈ ಆಪ್ ಸಿದ್ಧವಾಗಿದೆ ಮತ್ತು ಸ್ಮಾರ್ಟ್ ಸಿಸ್ಟಮ್‌ಗೆ ಸಂಪರ್ಕಗೊಂಡಿದೆ</string>
+    <string name="start_soil_test">ಮಣ್ಣಿನ ಪರೀಕ್ಷೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="real_time_analysis">ರೋವರ್ ಮೂಲಕ ನೈಜ ಸಮಯದ ವಿಶ್ಲೇಷಣೆ</string>
+    <string name="manual_input">ಮ್ಯಾನುಯಲ್\nಇನ್ಪುಟ್</string>
+    <string name="past_reports">ಹಳೆಯ\nವರದಿಗಳು</string>
+    
+    <string name="title_crop_selection">ಬೆಳೆ ಆಯ್ಕೆ</string>
+    <string name="desc_crop_selection">ವೈಯಕ್ತಿಕಗೊಳಿಸಿದ ಮಣ್ಣಿನ ಆಳದ ಶಿಫಾರಸು ಮತ್ತು ವಿಶ್ಲೇಷಣೆಗಾಗಿ ಬೆಳೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</string>
+    
+    <string name="title_rover_connection">ರೋವರ್ ಸಂಪರ್ಕ</string>
+    <string name="recommended_depth">ಶಿಫಾರಸು ಮಾಡಲಾದ ಪರೀಕ್ಷಾ ಆಳ</string>
+    <string name="btn_connect">ರೋವರ್‌ಗೆ ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="btn_start_analysis">ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="status_searching">ಸ್ಥಿತಿ: ರೋವರ್‌ಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ...</string>
+    
+    <string name="title_live_testing">ಲೈವ್ ಮಣ್ಣಿನ ಪರೀಕ್ಷೆ</string>
+    <string name="testing_desc">ರೋವರ್ ಸೆನ್ಸಾರ್‌ಗಳು ಮಣ್ಣಿನಿಂದ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುವವರೆಗೆ ದಯವಿಟ್ಟು ಕಾಯಿರಿ.</string>
+    <string name="testing_completed">ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ ಯಶಸ್ವಿಯಾಗಿ ಪೂರ್ಣಗೊಂಡಿದೆ!</string>
+    <string name="btn_view_report">ವರದಿಯನ್ನು ನೋಡಿ</string>
+    
+    <string name="tab_soil_health">ಮಣ್ಣಿನ ಆರೋಗ್ಯ</string>
+    <string name="tab_fertilizer">ಗೊಬ್ಬರ</string>
+    <string name="tab_insect">ಕೀಟ</string>
+    <string name="tab_disease">ರೋಗ</string>
+    <string name="tab_chat">AI ಎಕ್ಸ್ಪರ್ಟ್ ಚಾಟ್</string>
+    <string name="btn_speak">ಸಲಹೆಯನ್ನು ಕೇಳಿ</string>
+    <string name="chat_hint">ಈ ಬೆಳೆಯ ಬಗ್ಗೆ ಏನನ್ನಾದರೂ ಕೇಳಿ...</string>
+    <string name="label_nitrogen">ಸಾರಜನಕ (N)</string>
+    <string name="label_phosphorus">ರಂಜಕ (P)</string>
+    <string name="label_potassium">ಪೊಟ್ಯಾಸಿಯಮ್ (K)</string>
+    <string name="label_ph">pH ಮಟ್ಟ</string>
+    <string name="label_moisture">ತೇವಾಂಶ</string>
+    <string name="status_low">ಕಡಿಮೆ</string>
+    <string name="status_optimal">ಉತ್ತಮ</string>
+    <string name="status_imbalanced">ಅಸಮತೋಲನ</string>
+    <string name="status_good">ಚೆನ್ನಾಗಿದೆ</string>
+
+    <string name="sensor_temp">ಮಣ್ಣಿನ ತಾಪಮಾನ ಸಂಪರ್ಕಗೊಂಡಿದೆ</string>
+    <string name="sensor_moisture">ಮಣ್ಣಿನ ತೇವಾಂಶ ಓದಲಾಗುತ್ತಿದೆ...</string>
+    <string name="sensor_ph">pH ಸೆನ್ಸಾರ್ ಸ್ಥಿರವಾಗುತ್ತಿದೆ...</string>
+    <string name="sensor_ec">EC ಸೆನ್ಸಾರ್ ಓದಲಾಗುತ್ತಿದೆ...</string>
+    <string name="sensor_n">ಸಾರಜನಕ (N) ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...</string>
+    <string name="sensor_p">ರಂಜಕ (P) ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...</string>
+    <string name="sensor_k">ಪೊಟ್ಯಾಸಿಯಮ್ (K) ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...</string>
+
+    <string name="select_language">ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</string>
+    <string name="btn_done">ಮುಗಿದಿದೆ</string>
+
+    <!-- Manual Sampling Instructions -->
+    <string name="title_manual_sampling">ರೋವರ್ ಇಲ್ಲದ ಸಮಯದಲ್ಲಿ ಮಣ್ಣು ಸಂಗ್ರಹಿಸುವ ವಿಧಾನ</string>
+    <string name="desc_manual_sampling">ರೋವರ್ ಇಲ್ಲದ ಸಮಯದಲ್ಲಿ ಬಳಸಬೇಕಾದ ವಿಧಾನ: \n\nಮಣ್ಣನ್ನು ಸುಮಾರು 10 ಸ್ಥಳಗಳಲ್ಲಿ ತೆಗೆದು ಪ್ಲಾಸ್ಟಿಕ್ನಲ್ಲಿ ಸೇರಿಸಿಕೊಳ್ಳಬೇಕು.\n● ಈ ರೀತಿ ಸಂಗ್ರಹಿಸಿದ ಮಣ್ಣಿನ ಮಾದರಿಯನ್ನು ಛಾಯೆಯಲ್ಲಿ ಎಲೆಗಿ ನೈಸರ್ಗಿಕವಾಗಿ ನಲುಗಲು ಬಿಡಬೇಕು.\n● ಗುಡ್ಡೆ ಮಾಡಿದ ಮಣ್ಣಿನ ಮಾದರಿಯನ್ನು ನಾಲ್ಕು ಭಾಗವಾಗಿ ವಿಭಜಿಸಿ ಎರಡು ವಿರುದ್ಧದ ಭಾಗಗಳನ್ನು ತೆಗೆದು ಮತ್ತೆ ಗುಡ್ಡೆ ಮಾಡಿ 4 ಭಾಗಗಳಾಗಿ ವಿಭಜಿಸಿ ಎರಡು ಭಾಗಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬೇಕು. ಇದೇ ರೀತಿ ಮಾಡಿ ಸುಮಾರು ಅರ್ಧ ಕೆ.ಜಿ. ಮಣ್ಣಿನ ಮಾದರಿಯನ್ನು ಮಾತ್ರ ಸಂಗ್ರಹಿಸಬೇಕು.\n\n<b>ಮಣ್ಣಿನ ಮಾದರಿಯನ್ನು ತೆಗೆಯುವ ಅವಧಿ :</b>\n● ಬೆಳೆ ಕಟಾವಾದ ನಂತರ – ಗೋಬ್ಬರ ಹಾಕುವುದಕ್ಕಿಂತ ಮುಂಚಿತವಾಗಿ\n\n<b>ಮಣ್ಣಿನ ಮಾದರಿಯನ್ನು ಯಾವ ಸಂದರ್ಭದಲ್ಲಿ ತೆಗೆಯಬಾರದು</b>\n● ಬಯಲುಗಳ ಕಾಲುವೆ ಪಕ್ಕದಲ್ಲಿ\n● ಮರಗಳ ಕೆಳಗೆ, ಹಳ್ಳದಲ್ಲಿ\n● ಗೋಬ್ಬರ ಕೊಟ್ಟ ಪ್ರದೇಶದಲ್ಲಿ\n● ಜಮೀನಿಗೆ ಗೋಬ್ಬರ ಹಾಕಿದ ಸಮಯದಲ್ಲಿ</string>
+
+    <!-- New Strings for Hybrid/Voice -->
+    <string name="title_fertilizer_rec">ಗೊಬ್ಬರ ಶಿಫಾರಸುಗಳು</string>
+    <string name="title_pests_diseases">ಪ್ರಮುಖ ಕೀಟಗಳು ಮತ್ತು ರೋಗಗಳು</string>
+    <string name="msg_connect_internet">AI ಆಧಾರಿತ ಸಲಹೆಗಾಗಿ ಇಂಟರ್ನೆಟ್‌ಗೆ ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="voice_prompt">ಮಾತನಾಡಿ</string>
+    <string name="voice_error">ಈ ಸಾಧನದಲ್ಲಿ ಧ್ವನಿ ಇನ್‌ಪುಟ್ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
+    <string name="ai_analyzing">AI ತಜ್ಞರು ವಿಶ್ಲೇಷಿಸುತ್ತಿದ್ದಾರೆ...</string>
+    <string name="chat_welcome">ನಮಸ್ಕಾರ! ನಾನು %s ತಜ್ಞ. ನೀವು ಈ ಬೆಳೆಯ ಬಗ್ಗೆ ಏನನ್ನಾದರೂ ಕೇಳಬಹುದು.</string>
+</resources>

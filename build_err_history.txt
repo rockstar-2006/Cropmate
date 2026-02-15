@@ -1,0 +1,96 @@
+﻿To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/8.0/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:processDebugGoogleServices UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+
+> Task :app:compileDebugJavaWithJavac
+./gradlew : C:\Users\hp\Down
+loads\Cropmate-master\Cropma
+te-master\app\src\main\java\
+com\example\cropmate\History
+Activity.java:39: error: 
+cannot find symbol
+At line:1 char:65
++ ... tudio\jbr"; ./gradlew 
+installDebug 
+--console=plain --no-daemon 
+2>&1 | ...
++                 ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (C:\Us  
+  ers\hp\Dow...not find s   
+ ymbol:String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+            Intent intent = 
+new Intent(HistoryActivity.t
+his, AnalysisResultActivity.
+class);
+            ^
+  symbol:   class Intent
+  location: class 
+HistoryActivity
+C:\Users\hp\Downloads\Cropma
+te-master\Cropmate-master\ap
+p\src\main\java\com\example\
+cropmate\HistoryActivity.jav
+a:39: error: cannot find 
+symbol
+            Intent intent = 
+new Intent(HistoryActivity.t
+his, AnalysisResultActivity.
+class);
+                            
+    ^
+  symbol:   class Intent
+  location: class 
+HistoryActivity
+2 errors
+
+> Task :app:compileDebugJavaWithJavac FAILED
+15 actionable tasks: 1 executed, 14 up-to-date
+
+FAILURE: Build failed with 
+an exception.
+
+* What went wrong:
+Execution failed for task ':
+app:compileDebugJavaWithJava
+c'.
+> Compilation failed; see 
+the compiler error output 
+for details.
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or 
+--debug option to get more 
+log output.
+> Run with --scan to get 
+full insights.
+
+* Get more help at 
+https://help.gradle.org
+
+BUILD FAILED in 15s

@@ -1,3 +1,65 @@
 <resources>
     <string name="app_name">Crop Mate</string>
+    <string name="title_dashboard">Smart Soil Advisor</string>
+    <string name="system_ready">System Ready</string>
+    <string name="welcome_message">This app is ready and connected to smart system</string>
+    <string name="start_soil_test">START SOIL TEST</string>
+    <string name="real_time_analysis">Real-time analysis via Rover</string>
+    <string name="manual_input">Manual\nInput</string>
+    <string name="past_reports">Past\nReports</string>
+    
+    <string name="title_crop_selection">Crop Selection</string>
+    <string name="desc_crop_selection">Select a crop for personalized soil depth recommendation and analysis</string>
+    
+    <string name="title_rover_connection">Rover Connection</string>
+    <string name="recommended_depth">Recommended Testing Depth</string>
+    <string name="btn_connect">Connect to Rover</string>
+    <string name="btn_start_analysis">Start Soil Analysis</string>
+    <string name="status_searching">Status: Searching for Rover...</string>
+    
+    <string name="title_live_testing">Live Soil Testing</string>
+    <string name="testing_desc">Please wait while the rover sensors collect data from the soil.</string>
+    <string name="testing_completed">Soil Analysis Completed Successfully!</string>
+    <string name="btn_view_report">View Report</string>
+    
+    <string name="tab_soil_health">Soil Health</string>
+    <string name="tab_fertilizer">Fertilizer</string>
+    <string name="tab_insect">Insect</string>
+    <string name="tab_disease">Disease</string>
+    <string name="tab_chat">AI Expert Chat</string>
+    <string name="btn_speak">Listen to Advice</string>
+    <string name="chat_hint">Ask anything about this crop...</string>
+    <string name="label_nitrogen">Nitrogen (N)</string>
+    <string name="label_phosphorus">Phosphorus (P)</string>
+    <string name="label_potassium">Potassium (K)</string>
+    <string name="label_ph">pH Level</string>
+    <string name="label_moisture">Moisture</string>
+    <string name="status_low">LOW</string>
+    <string name="status_optimal">OPTIMAL</string>
+    <string name="status_imbalanced">IMBALANCED</string>
+    <string name="status_good">GOOD</string>
+    
+    <string name="sensor_temp">Soil Temperature Connected</string>
+    <string name="sensor_moisture">Soil Moisture Reading...</string>
+    <string name="sensor_ph">pH Sensor Stabilizing...</string>
+    <string name="sensor_ec">EC Sensor Reading...</string>
+    <string name="sensor_n">Nitrogen (N) Analyzing...</string>
+    <string name="sensor_p">Phosphorus (P) Analyzing...</string>
+    <string name="sensor_k">Potassium (K) Analyzing...</string>
+    
+    <string name="select_language">Select Language</string>
+    <string name="btn_done">Done</string>
+
+    <!-- Manual Sampling Instructions -->
+    <string name="title_manual_sampling">Step to Collect Soil Sample (If Rover is Not Present)</string>
+    <string name="desc_manual_sampling">If the rover is not present, follow these steps to collect the soil sample and test it using sensors:\n\nFor crops based on their depth 9 inches to 12 inches. Take uniform soil samples of one-inch thickness from about 10 different locations using a spade or shovel and mix them in a plastic container.\n\n● The collected soil sample should be dried naturally in shade.\n● Make a heap of the soil sample and divide it into four equal parts. Remove two opposite parts and again mix the remaining soil. Repeat this process until about half kg of soil sample is obtained.\n● Label the collected sample properly with complete details. Do not dry the label.\n\n<b>Best Time to Collect Soil Sample</b>\n● After harvest – Before applying fertilizers\n\n<b>When Soil Sample Should Not Be Collected</b>\n● From protected or wet areas near canals\n● Under trees or from pits\n● From areas where fertilizers have been applied\n● Immediately after applying fertilizers\n● From waste or garbage areas</string>
+
+    <!-- New Strings for Hybrid/Voice -->
+    <string name="title_fertilizer_rec">Fertilizer Recommendations</string>
+    <string name="title_pests_diseases">Common Pests &amp; Diseases</string>
+    <string name="msg_connect_internet">Connect to internet for AI-based advice.</string>
+    <string name="voice_prompt">Speak now</string>
+    <string name="voice_error">Voice input not supported on this device</string>
+    <string name="ai_analyzing">AI Expert analyzing...</string>
+    <string name="chat_welcome">Hello! I am your %s expert. Ask me anything.</string>
 </resources>

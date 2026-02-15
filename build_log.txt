@@ -1,0 +1,63 @@
+﻿To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/8.0/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata FAILED
+./gradlew : 
+At line:1 char:65
++ ... tudio\jbr"; ./gradlew 
+installDebug 
+--console=plain --no-daemon 
+2>&1 | ...
++                 ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (:Stri  
+  ng) [], RemoteException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+FAILURE: Build failed with 
+an exception.
+
+* What went wrong:
+Execution failed for task ':
+app:checkDebugAarMetadata'.
+> Could not resolve all 
+files for configuration ':ap
+p:debugRuntimeClasspath'.
+   > Could not find com.goog
+le.ai.client.generativeai:ge
+nerativeai-java:0.7.0.
+     Searched in the 
+following locations:
+       - https://dl.google.c
+om/dl/android/maven2/com/goo
+gle/ai/client/generativeai/g
+enerativeai-java/0.7.0/gener
+ativeai-java-0.7.0.pom
+       - https://repo.maven.
+apache.org/maven2/com/google
+/ai/client/generativeai/gene
+rativeai-java/0.7.0/generati
+veai-java-0.7.0.pom
+     Required by:
+         project :app
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or 
+--debug option to get more 
+log output.
+> Run with --scan to get 
+full insights.
+
+* Get more help at 
+https://help.gradle.org
+
+BUILD FAILED in 43s
+2 actionable tasks: 1 executed, 1 up-to-date

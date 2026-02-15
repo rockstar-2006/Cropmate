@@ -46,13 +46,18 @@ public class MainActivity extends AppCompatActivity {
         doneButton.setOnClickListener(v -> {
             String selectedLanguage = adapter.getSelectedLanguage();
             if (selectedLanguage != null) {
-                Toast.makeText(this, "Selected: " + selectedLanguage, Toast.LENGTH_SHORT).show();
+                String langCode = "en";
+                if (selectedLanguage.equalsIgnoreCase("Kannada")) {
+                    langCode = "kn";
+                }
+                
+                // Update Locale
+                LocaleHelper.setLocale(this, langCode);
 
-                // Navigate to DashboardActivity
+                // Re-launch app logic to apply changes globally or just navigate
                 Intent intent = new Intent(MainActivity.this, Dashboard.class);
-                intent.putExtra("selected_language", selectedLanguage); // Pass the selected language
                 startActivity(intent);
-                finish(); // Close MainActivity
+                finish();
             } else {
                 Toast.makeText(this, "Please select a language", Toast.LENGTH_SHORT).show();
             }
