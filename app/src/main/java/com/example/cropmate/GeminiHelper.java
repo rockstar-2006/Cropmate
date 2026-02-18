@@ -11,31 +11,18 @@ import com.google.common.util.concurrent.ListenableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import com.google.ai.client.generativeai.type.GenerationConfig;
-
 public class GeminiHelper {
-    private static final String[] API_KEYS = {
-            "AIzaSyA0tXF_qsHvXLRKLOewe19iQDwRO-I-HbI",
-            "AIzaSyCtTL6CDK15Q_SD0zXj_6BZberN3TxuaI0",
-            "AIzaSyDCnLtVFc7i-2q-q7678gvgMYns87Pgejw"
-    };
-    private static int currentKeyIndex = 0;
-    private GenerativeModelFutures model;
+    private final GenerativeModelFutures model;
+    private final Executor executor = Executors.newSingleThreadExecutor();
 
     public GeminiHelper() {
-        initModel();
-    }
-
-    private void initModel() {
-        // Updated to gemini-2.5-flash as requested. 
-        // This is a high-capability model released in late 2025/early 2026.
-        GenerativeModel gm = new GenerativeModel("gemini-2.5-flash", API_KEYS[currentKeyIndex]);
-        model = GenerativeModelFutures.from(gm);
-    }
-
-    private void rotateKey() {
-        currentKeyIndex = (currentKeyIndex + 1) % API_KEYS.length;
-        initModel();
+        // Model version as requested (using 1.5 as it's the actual flash version)
+        // Correct initialization for the Java SDK
+        GenerativeModel gm = new GenerativeModel(
+            "gemini-2.5-flash", 
+            "AIzaSyBNWVRLWtlOuBgKhWmhA4gWh3USMI54luo"
+        );
+        this.model = GenerativeModelFutures.from(gm);
     }
 
     public interface GeminiCallback {
@@ -44,16 +31,11 @@ public class GeminiHelper {
     }
 
     public void getRecommendation(String prompt, GeminiCallback callback) {
-        getRecommendationWithRetry(prompt, callback, 0);
-    }
-
-    private void getRecommendationWithRetry(String prompt, GeminiCallback callback, int attempt) {
         Content content = new Content.Builder()
                 .addText(prompt)
                 .build();
 
         ListenableFuture<GenerateContentResponse> response = model.generateContent(content);
-        Executor executor = Executors.newSingleThreadExecutor();
 
         Futures.addCallback(response, new FutureCallback<GenerateContentResponse>() {
             @Override
@@ -62,22 +44,13 @@ public class GeminiHelper {
                 if (text != null && !text.isEmpty()) {
                     callback.onSuccess(text);
                 } else {
-                    callback.onError(new Exception("Empty response from AI"));
+                    callback.onError(new Exception("AI response was empty"));
                 }
             }
 
             @Override
             public void onFailure(Throwable t) {
-                if (attempt < API_KEYS.length - 1) {
-                    android.util.Log.w("GeminiRetry", "Key failed, rotating and retrying in 2s... Attempt: " + (attempt + 1));
-                    rotateKey();
-                    // Delay retry by 2 seconds to let the server breathe
-                    new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
-                        getRecommendationWithRetry(prompt, callback, attempt + 1);
-                    }, 2000);
-                } else {
-                    callback.onError(t);
-                }
+                callback.onError(t);
             }
         }, executor);
     }

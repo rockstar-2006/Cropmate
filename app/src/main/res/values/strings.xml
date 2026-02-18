@@ -4,7 +4,7 @@
     <string name="system_ready">System Ready</string>
     <string name="welcome_message">This app is ready and connected to smart system</string>
     <string name="start_soil_test">START SOIL TEST</string>
-    <string name="real_time_analysis">Real-time analysis via Rover</string>
+    <string name="real_time_analysis">Real-time analysis via Sensor/Rover</string>
     <string name="manual_input">Manual\nInput</string>
     <string name="past_reports">Past\nReports</string>
     

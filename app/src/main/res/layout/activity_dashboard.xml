@@ -129,7 +129,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_start_test"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="220dp"
             android:layout_marginTop="24dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
@@ -140,31 +140,36 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/gradient_bg">
 
+                <!-- Lottie Animation added here per user request -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:lottie_rawRes="@raw/loading_screen"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="24dp"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/logo"
-                        app:tint="@color/white" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-black"
                         android:text="@string/start_soil_test"
                         android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
                         android:fontFamily="sans-serif"
                         android:text="@string/real_time_analysis"
                         android:textColor="#E0E0E0"

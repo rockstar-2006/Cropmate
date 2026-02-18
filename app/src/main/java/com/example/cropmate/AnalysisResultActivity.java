@@ -171,17 +171,95 @@ public class AnalysisResultActivity extends AppCompatActivity implements TextToS
     }
 
     private void runMasterAnalysis() {
-        if (isNetworkAvailable()) {
-            fetchSection("FERT", layoutFertilizer, true, 0);
-            fetchSection("INSECT", layoutInsect, false, 3000);
-            fetchSection("DISEASE", layoutDisease, false, 6000);
-        } else {
+        if (!isNetworkAvailable()) {
             fetchOfflineSection("FERT", layoutFertilizer);
             fetchOfflineSection("INSECT", layoutInsect);
             fetchOfflineSection("DISEASE", layoutDisease);
+            return;
         }
+
+        // SHOW ANALYZING STATE FOR ALL
+        showAnalyzing(layoutFertilizer);
+        showAnalyzing(layoutInsect);
+        showAnalyzing(layoutDisease);
+
+        String lang = LocaleHelper.getLanguage(this);
+        String langInstruction = "Respond in " + (lang.equalsIgnoreCase("kn") ? "Kannada" : "English");
+        String sensorData = String.format("N=%d, P=%d, K=%d, pH=%.1f, Moisture=%d%%", valN, valP, valK, valPH, moisture);
+
+        String masterPrompt = "You are an expert agronomist. For the crop " + cropName + " and these sensor readings: " + sensorData + 
+                ", provide three separate sections exactly as follows:\n" +
+                "###FERT###\n[Fertilizer advice]\n" +
+                "###INSECT###\n[2 major insects and prevention]\n" +
+                "###DISEASE###\n[2 major diseases and control]\n" +
+                langInstruction + ". Keep each section concise but informative.";
+
+        geminiHelper.getRecommendation(masterPrompt, new GeminiHelper.GeminiCallback() {
+            @Override
+            public void onSuccess(String response) {
+                runOnUiThread(() -> {
+                    parseMasterResponse(response);
+                });
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                runOnUiThread(() -> {
+                    showErrorWithRetry(layoutFertilizer, "FERT", true, 0, throwable.getMessage());
+                    showErrorWithRetry(layoutInsect, "INSECT", false, 0, throwable.getMessage());
+                    showErrorWithRetry(layoutDisease, "DISEASE", false, 0, throwable.getMessage());
+                });
+            }
+        });
     }
 
+    private void showAnalyzing(LinearLayout layout) {
+        layout.removeAllViews();
+        TextView tvStatus = new TextView(this);
+        tvStatus.setText(getString(R.string.ai_analyzing));
+        tvStatus.setPadding(0, 32, 0, 16);
+        tvStatus.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        tvStatus.setTextColor(ContextCompat.getColor(this, R.color.primary));
+        layout.addView(tvStatus);
+        
+        android.widget.ProgressBar progress = new android.widget.ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
+        progress.setIndeterminate(true);
+        layout.addView(progress);
+    }
+
+    private void parseMasterResponse(String response) {
+        layoutFertilizer.removeAllViews();
+        layoutInsect.removeAllViews();
+        layoutDisease.removeAllViews();
+
+        String fertText = "", insectText = "", diseaseText = "";
+
+        try {
+            if (response.contains("###FERT###")) {
+                int start = response.indexOf("###FERT###") + 10;
+                int end = response.indexOf("###INSECT###");
+                if (end == -1) end = response.length();
+                fertText = response.substring(start, end).trim();
+            }
+            if (response.contains("###INSECT###")) {
+                int start = response.indexOf("###INSECT###") + 12;
+                int end = response.indexOf("###DISEASE###");
+                if (end == -1) end = response.length();
+                insectText = response.substring(start, end).trim();
+            }
+            if (response.contains("###DISEASE###")) {
+                int start = response.indexOf("###DISEASE###") + 13;
+                diseaseText = response.substring(start).trim();
+            }
+        } catch (Exception e) {
+            fertText = response; // Fallback
+        }
+
+        displayResult(layoutFertilizer, fertText.isEmpty() ? "No fertilizer data returned." : fertText, true);
+        displayResult(layoutInsect, insectText.isEmpty() ? "No insect data returned." : insectText, false);
+        displayResult(layoutDisease, diseaseText.isEmpty() ? "No disease data returned." : diseaseText, false);
+    }
+    
     private void fetchOfflineSection(String type, LinearLayout layout) {
         layout.removeAllViews();
         String lang = LocaleHelper.getLanguage(this);
@@ -204,11 +282,11 @@ public class AnalysisResultActivity extends AppCompatActivity implements TextToS
             }
             displayResult(layout, advice.toString(), false);
         } else {
-            loadPestData(layout, isKannada);
+            loadPestData(layout, isKannada, type);
         }
     }
 
-    private void loadPestData(LinearLayout layout, boolean isKannada) {
+    private void loadPestData(LinearLayout layout, boolean isKannada, String type) {
         try {
             InputStream is = getAssets().open("crop_knowledge.json");
             int size = is.available();
@@ -221,20 +299,22 @@ public class AnalysisResultActivity extends AppCompatActivity implements TextToS
             JSONArray cropsArray = jsonObject.getJSONArray("crops");
             boolean found = false;
 
+            String arrayKey = type.equalsIgnoreCase("DISEASE") ? "diseases" : "insects";
+
             for (int i = 0; i < cropsArray.length(); i++) {
                 JSONObject cropObj = cropsArray.getJSONObject(i);
                 if (cropObj.getString("name").equalsIgnoreCase(cropName)) {
                     found = true;
-                    if (cropObj.has("insects")) {
-                         JSONArray insects = cropObj.getJSONArray("insects");
-                         for(int j=0; j<insects.length(); j++){
-                             JSONObject insect = insects.getJSONObject(j);
-                             String name = isKannada && insect.has("name_kn") ? insect.getString("name_kn") : insect.getString("name");
-                             String control = isKannada && insect.has("control_kn") ? insect.getString("control_kn") : insect.getString("control");
+                    if (cropObj.has(arrayKey)) {
+                         JSONArray items = cropObj.getJSONArray(arrayKey);
+                         for(int j=0; j<items.length(); j++){
+                             JSONObject item = items.getJSONObject(j);
+                             String name = isKannada && item.has("name_kn") ? item.getString("name_kn") : item.getString("name");
+                             String control = isKannada && item.has("control_kn") ? item.getString("control_kn") : item.getString("control");
                              addInfoCard(layout, name, control);
                          }
                     } else {
-                        displayResult(layout, isKannada ? "ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ" : "No specific data available.", false);
+                        displayResult(layout, isKannada ? "ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ" : "No specific data available for " + type.toLowerCase() + ".", false);
                     }
                     break;
                 }
@@ -264,13 +344,15 @@ public class AnalysisResultActivity extends AppCompatActivity implements TextToS
         String lang = LocaleHelper.getLanguage(this);
         String langInstruction = "Respond briefly in " + (lang.equalsIgnoreCase("kn") ? "Kannada" : "English");
         
+        String sensorData = String.format("Sensor Data: N=%d, P=%d, K=%d, pH=%.1f, Moisture=%d%%.", valN, valP, valK, valPH, moisture);
+        
         String prompt = "";
         if (type.equals("FERT")) {
-            prompt = "Short expert advice: " + cropName + " fertilizer for soil N=" + valN + ", P=" + valP + ". " + langInstruction;
+            prompt = "Short expert fertilizer advice for " + cropName + " based on " + sensorData + " " + langInstruction;
         } else if (type.equals("INSECT")) {
-            prompt = "2 insects for " + cropName + " + short prevention. " + langInstruction;
+            prompt = "List 2 potential insects for " + cropName + " considering " + sensorData + " and give short prevention. " + langInstruction;
         } else {
-            prompt = "2 diseases for " + cropName + " + short control. " + langInstruction;
+            prompt = "List 2 potential diseases for " + cropName + " considering " + sensorData + " and give short control. " + langInstruction;
         }
 
         final String finalPrompt = prompt;
@@ -288,10 +370,41 @@ public class AnalysisResultActivity extends AppCompatActivity implements TextToS
                 }
                 @Override
                 public void onError(Throwable throwable) {
-                    runOnUiThread(() -> fetchOfflineSection(type, finalLayout));
+                    runOnUiThread(() -> {
+                        finalLayout.removeAllViews();
+                        showErrorWithRetry(finalLayout, type, finalShowSpeak, delayMs, throwable.getMessage());
+                    });
                 }
             });
         }, delayMs);
+    }
+
+    private void showErrorWithRetry(LinearLayout layout, String type, boolean showSpeak, int delayMs, String errorMsg) {
+        TextView tvError = new TextView(this);
+        tvError.setText("AI Error: " + (errorMsg.contains("429") ? "Quota Exceeded (Server Busy)" : "Service Unreachable"));
+        tvError.setTextColor(ContextCompat.getColor(this, R.color.red));
+        tvError.setPadding(0, 16, 0, 8);
+        tvError.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        layout.addView(tvError);
+
+        Button btnRetry = new Button(this);
+        btnRetry.setText("RETRY AI ANALYSIS");
+        btnRetry.setBackgroundTintList(android.content.res.ColorStateList.valueOf(ContextCompat.getColor(this, R.color.primary)));
+        btnRetry.setTextColor(ContextCompat.getColor(this, R.color.white));
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.gravity = android.view.Gravity.CENTER;
+        btnRetry.setLayoutParams(params);
+        btnRetry.setOnClickListener(v -> fetchSection(type, layout, showSpeak, 0));
+        layout.addView(btnRetry);
+
+        Button btnOffline = new Button(this);
+        btnOffline.setText("VIEW OFFLINE INFO");
+        btnOffline.setBackgroundTintList(android.content.res.ColorStateList.valueOf(ContextCompat.getColor(this, R.color.grey)));
+        btnOffline.setTextColor(ContextCompat.getColor(this, R.color.white));
+        params.topMargin = 16;
+        btnOffline.setLayoutParams(params);
+        btnOffline.setOnClickListener(v -> fetchOfflineSection(type, layout));
+        layout.addView(btnOffline);
     }
 
     private void displayResult(LinearLayout layout, String text, boolean showSpeak) {
@@ -403,7 +516,12 @@ public class AnalysisResultActivity extends AppCompatActivity implements TextToS
             public void onError(Throwable throwable) {
                 runOnUiThread(() -> {
                     chatHistory.remove(thinkingPos);
-                    chatHistory.add(thinkingPos, new ChatMessage("Error: AI Server overloaded.", false));
+                    String errorMsg = throwable.getMessage();
+                    String displayError = "AI Server busy/overloaded. Please Wait.";
+                    if (errorMsg != null && errorMsg.contains("429")) {
+                        displayError = "Quota exceeded! Please try again in 1 minute.";
+                    }
+                    chatHistory.add(thinkingPos, new ChatMessage(displayError, false));
                     chatAdapter.notifyItemChanged(thinkingPos);
                 });
             }

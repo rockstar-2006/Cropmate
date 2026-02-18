@@ -1,262 +1,178 @@
 {
-  "crops": [
-    {
-      "name": "Paddy",
-      "name_kn": "ಭತ್ತ",
-      "soil_depth_cm": 15,
-      "depth_reason": "Nutrient availability is highest in the top flooded puddled layer.",
-      "depth_reason_kn": "ಪೋಷಕಾಂಶಗಳ ಲಭ್ಯತೆ ಮೇಲಿನ ಜಲಾವೃತ ಪದರದಲ್ಲಿ ಅತ್ಯಧಿಕವಾಗಿದೆ.",
-      "insects": [
+    "crops": [
         {
-          "name": "Stem Borer",
-          "name_kn": "ಕಾಂಡ ಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Dead heart in vegetative stage, white ear head in reproductive stage.",
-          "symptoms_kn": "ಸಸ್ಯಾವಸ್ಥೆಯಲ್ಲಿ ಸುಳಿ ಒಣಗುವುದು (ಡೆಡ್ ಹಾರ್ಟ್), ಸಂತಾನೋತ್ಪತ್ತಿ ಹಂತದಲ್ಲಿ ಬಿಳಿ ತೆನೆ.",
-          "control": "Spray Chlorantraniliprole 18.5 SC (0.3 ml/L) or Cartap Hydrochloride 4G (8 kg/acre).",
-          "control_kn": "ಕ್ಲೋರಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 18.5 ಎಸ್‌ಸಿ (0.3 ಮಿ.ಲೀ/ಲೀ) ಅಥವಾ ಕಾರ್ಟಾಪ್ ಹೈಡ್ರೋಕ್ಲೋರೈಡ್ 4ಜಿ (8 ಕೆ.ಜಿ/ಎಕರೆ) ಬಳಸಿ."
+            "name": "Paddy",
+            "depth_reason": "Paddy roots grow up to 15-20cm; 20cm testing ensures nutrients in the active root zone are measured.",
+            "depth_reason_kn": "ಭತ್ತದ ಬೇರುಗಳು 15-20 ಸೆಂ.ಮೀ ವರೆಗೆ ಬೆಳೆಯುತ್ತವೆ; 20 ಸೆಂ.ಮೀ ಪರೀಕ್ಷೆಯು ಸಕ್ರಿಯ ಬೇರು ವಲಯದಲ್ಲಿನ ಪೋಷಕಾಂಶಗಳನ್ನು ಅಳೆಯುತ್ತದೆ.",
+            "insects": [
+                {
+                    "name": "Yellow Stem Borer",
+                    "name_kn": "ಹಳದಿ ಕಾಂಡ ಕೊರಕ",
+                    "symptoms": "Dead hearts in young plants, white ears in mature plants.",
+                    "symptoms_kn": "ಎಳೆಯ ಸಸಿಗಳಲ್ಲಿ ಸತ್ತ ಮೊಗ್ಗುಗಳು, ಬೆಳೆದ ಸಸ್ಯಗಳಲ್ಲಿ ಬಿಳಿ ತೆನೆಗಳು.",
+                    "control": "Use Pheromone traps; Spray Chlorantraniliprole 0.4 ml/L.",
+                    "control_kn": "ಫೆರೋಮೋನ್ ಬಲೆಗಳನ್ನು ಬಳಸಿ; ಕ್ಲೋರಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 0.4 ಮಿಲಿ/ಲೀ ಸಿಂಪಡಿಸಿ."
+                },
+                {
+                    "name": "Leaf Folder",
+                    "name_kn": "ಎಲೆ ಸುರುಳಿ ಹುಳು",
+                    "symptoms": "Folded leaves with white transparent streaks.",
+                    "symptoms_kn": "ಬಿಳಿ ಪಾರದರ್ಶಕ ಗೆರೆಗಳೊಂದಿಗೆ ಮಡಚಿದ ಎಲೆಗಳು.",
+                    "control": "Manual removal of folded leaves; Spray Cartap hydrochloride.",
+                    "control_kn": "ಮಡಚಿದ ಎಲೆಗಳ ಹಸ್ತಚಾಲಿತ ತೆಗೆಯುವಿಕೆ; ಕಾರ್ಟಾಪ್ ಹೈಡ್ರೋಕ್ಲೋರೈಡ್ ಸಿಂಪಡಿಸಿ."
+                }
+            ],
+            "diseases": [
+                {
+                    "name": "Paddy Blast",
+                    "name_kn": "ಬೆಂಕಿ ರೋಗ",
+                    "symptoms": "Spindle-shaped spots with gray centers on leaves.",
+                    "symptoms_kn": "ಎಲೆಗಳ ಮೇಲೆ ಬೂದು ಬಣ್ಣದ ಕೇಂದ್ರದೊಂದಿಗೆ ಕದಿರು ಆಕಾರದ ಚುಕ್ಕೆಗಳು.",
+                    "control": "Avoid excess Nitrogen; Spray Tricyclazole 0.6 g/L.",
+                    "control_kn": "ಹೆಚ್ಚುವರಿ ಸಾರಜನಕವನ್ನು ತಪ್ಪಿಸಿ; ಟ್ರೈಸೈಕ್ಲಾಜೋಲ್ 0.6 ಗ್ರಾಂ/ಲೀ ಸಿಂಪಡಿಸಿ."
+                },
+                {
+                    "name": "Bacterial Leaf Blight",
+                    "name_kn": "ಬ್ಯಾಕ್ಟೀರಿಯಾದ ಎಲೆ ಬ್ಲೈಟ್",
+                    "symptoms": "Yellowing/drying of leaves from tip downwards.",
+                    "symptoms_kn": "ಎಲೆಯ ತುದಿಯಿಂದ ಕೆಳಕ್ಕೆ ಎಲೆಗಳು ಹಳದಿಯಾಗುವುದು/ಒಣಗುವುದು.",
+                    "control": "Spray Streptocycline 0.1g + Copper Oxychloride 2g per liter.",
+                    "control_kn": "ಲೀಟರ್‌ಗೆ 0.1 ಗ್ರಾಂ ಸ್ಟ್ರೆಪ್ಟೊಸೈಕ್ಲಿನ್ + 2 ಗ್ರಾಂ ಕಾಪರ್ ಆಕ್ಸಿಕ್ಲೋರೈಡ್ ಸಿಂಪಡಿಸಿ."
+                }
+            ]
         },
         {
-          "name": "Leaf Folder",
-          "name_kn": "ಗರಿ ಮಡಿಸುವ ಹುಳು / ಸುರುಳಿ ಹುಳು",
-          "symptoms": "Leaves fold longitudinally and larvae feed inside, scraping green matter. Leaves appear white and dry.",
-          "symptoms_kn": "ಎಲೆಗಳು ಉದ್ದುದ್ದವಾಗಿ ಮಡಚಿಕೊಳ್ಳುತ್ತವೆ ಮತ್ತು ಹುಳಗಳು ಒಳಗಿದ್ದು ಹಸಿರು ಭಾಗವನ್ನು ಕೆರೆದು ತಿನ್ನುತ್ತವೆ. ಎಲೆಗಳು ಬಿಳಿಯಾಗಿ ಒಣಗಿದಂತೆ ಕಾಣುತ್ತವೆ.",
-          "control": "Spray Chlorpyriphos 20 EC (2 ml/L) or Acephate 75 SP.",
-          "control_kn": "ಕ್ಲೋರ್‌ಪೈರಿಫಾಸ್ 20 ಇಸಿ (2 ಮಿ.ಲೀ/ಲೀ) ಅಥವಾ ಅಸಿಫೇಟ್ 75 ಎಸ್‌ಪಿ ಸಿಂಪಡಿಸಿ."
+            "name": "Tomato",
+            "depth_reason": "Tomato is a shallow to medium rooted crop; 15cm is ideal for checking NPK availability.",
+            "depth_reason_kn": "ಟೊಮೆಟೊ ಮಧ್ಯಮ ಬೇರಿನ ಬೆಳೆಯಾಗಿದೆ; ಎನ್‌ಪಿಕೆ ಲಭ್ಯತೆಯನ್ನು ಪರೀಕ್ಷಿಸಲು 15 ಸೆಂ.ಮೀ ಸೂಕ್ತವಾಗಿದೆ.",
+            "insects": [
+                {
+                    "name": "Fruit Borer",
+                    "name_kn": "ಹಣ್ಣು ಕೊರಕ ಹುಳು",
+                    "symptoms": "Circular holes on fruits; larval presence inside.",
+                    "symptoms_kn": "ಹಣ್ಣುಗಳ ಮೇಲೆ ವೃತ್ತಾಕಾರದ ರಂಧ್ರಗಳು; ಒಳಗೆ ಲಾರ್ವಾಗಳ ಉಪಸ್ಥಿತಿ.",
+                    "control": "Keep bird perches; Spray Spinosad 0.3 ml/L.",
+                    "control_kn": "ಹಕ್ಕಿಗಳ ಕುಳಿತುಕೊಳ್ಳುವ ಅಡಚಣೆಯನ್ನು ಇರಿಸಿ; ಸ್ಪಿನೋಸಾಡ್ 0.3 ಮಿಲಿ/ಲೀ ಸಿಂಪಡಿಸಿ."
+                }
+            ],
+            "diseases": [
+                {
+                    "name": "Early Blight",
+                    "name_kn": "ಮುಂಗಾರು ರೋಗ",
+                    "symptoms": "Concentric rings (target board spots) on lower leaves.",
+                    "symptoms_kn": "ಬೆಳೆಯ ಎಲೆಗಳ ಮೇಲೆ ಏಕಕೇಂದ್ರಿತ ಉಂಗುರಗಳು (ಟಾರ್ಗೆಟ್ ಬೋರ್ಡ್ ಚುಕ್ಕೆಗಳು).",
+                    "control": "Spray Mancozeb 2g/L; Remove infected lower leaves.",
+                    "control_kn": "ಮ್ಯಾಂಕೋಜೆಬ್ 2ಗ್ರಾಂ/ಲೀ ಸಿಂಪಡಿಸಿ; ಸೋಂಕಿತ ಕೆಳ ಎಲೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ."
+                },
+                {
+                    "name": "Leaf Curl Virus",
+                    "name_kn": "ಎಲೆ ಮುದುರು ರೋಗ",
+                    "symptoms": "Upward curling and yellowing of leaves; stunted growth.",
+                    "symptoms_kn": "ಎಲೆಗಳ ಮೇಲ್ಮುಖ ಸುರುಳಿ ಮತ್ತು ಹಳದಿಯಾಗುವುದು; ಕುಂಠಿತ ಬೆಳವಣಿಗೆ.",
+                    "control": "Control Whiteflies with Imidacloprid; Pull out infected plants.",
+                    "control_kn": "ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್‌ನೊಂದಿಗೆ ಬಿಳಿ ನೊಣಗಳನ್ನು ನಿಯಂತ್ರಿಸಿ; ಸೋಂಕಿತ ಸಸ್ಯಗಳನ್ನು ಕಿತ್ತುಹಾಕಿ."
+                }
+            ]
         },
         {
-          "name": "Brown Plant Hopper",
-          "name_kn": "ಕಂದು ಜಿಗಿಹುಳು (BPH)",
-          "symptoms": "Nymphs and adults suck sap from base of tillers. Plants turn yellow and dry up (Hopper Burn).",
-          "symptoms_kn": "ಮರಿ ಮತ್ತು ಪ್ರಾಯದ ಹುಳುಗಳು ಕೂಳೆ ಒಡೆಯುವ ಹಂತದಲ್ಲಿ ಬುಡದಿಂದ ರಸ ಹೀರುತ್ತವೆ. ಗಿಡಗಳು ಹಳದಿಯಾಗಿ ಒಣಗುತ್ತವೆ (ಹಾಪ್ಪರ್ ಬರ್ನ್).",
-          "control": "Use Imidacloprid 17.8 SL (0.5 ml/L) or Buprofezin 25 SC.",
-          "control_kn": "ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ 17.8 ಎಸ್‌ಎಲ್ (0.5 ಮಿ.ಲೀ/ಲೀ) ಅಥವಾ ಬ್ರುಪ್ರೊಫೆಜಿನ್ 25 ಎಸ್‌ಸಿ ಬಳಸಿ."
+            "name": "Ragi",
+            "depth_reason": "Ragi roots are fibrous and shallow; 10cm depth gives best NPK readings for growth.",
+            "depth_reason_kn": "ರಾಗಿ ಬೇರುಗಳು ನಾರು ಮತ್ತು ಆಳವಿಲ್ಲದವು; 10 ಸೆಂ.ಮೀ ಆಳವು ಬೆಳವಣಿಗೆಗೆ ಉತ್ತಮ ಎನ್‌ಪಿಕೆ ರೀಡಿಂಗ್ ನೀಡುತ್ತದೆ.",
+            "insects": [
+                {
+                    "name": "Stem Borer",
+                    "name_kn": "ಕಾಂಡ ಕೊರಕ ಹುಳು",
+                    "symptoms": "Dead hearts in the center of the plant.",
+                    "symptoms_kn": "ಸಸ್ಯದ ಮಧ್ಯಭಾಗದಲ್ಲಿ ಸತ್ತ ಮೊಗ್ಗುಗಳು.",
+                    "control": "Pull out and destroy dead hearts; Apply Carbofuran 3G pellets.",
+                    "control_kn": "ಸತ್ತ ಮೊಗ್ಗುಗಳನ್ನು ಕಿತ್ತು ನಾಶಪಡಿಸಿ; ಕಾರ್ಬೋಫ್ಯೂರಾನ್ 3G ಉಂಡೆಗಳನ್ನು ಅನ್ವಯಿಸಿ."
+                }
+            ],
+            "diseases": [
+                {
+                    "name": "Ragi Blast",
+                    "name_kn": "ರಾಗಿ ಬೆಂಕಿ ರೋಗ",
+                    "symptoms": "Diamond shaped spots on leaves; neck rot in mature plants.",
+                    "symptoms_kn": "ಎಲೆಗಳ ಮೇಲೆ ವಜ್ರಾಕಾರದ ಚುಕ್ಕೆಗಳು; ಬೆಳೆದ ಸಸ್ಯಗಳಲ್ಲಿ ಕೊರಳು ಕೊಳೆತ.",
+                    "control": "Seed treatment with Thiram; Spray Carbendazim 1g/L.",
+                    "control_kn": "ಥೈರಾಮ್ ಜೊತೆಗೆ ಬೀಜೋಪಚಾರ; ಕಾರ್ಬೆಂಡಾಜಿಮ್ 1ಗ್ರಾಂ/ಲೀ ಸಿಂಪಡಿಸಿ."
+                }
+            ]
+        },
+        {
+            "name": "Sugarcane",
+            "depth_reason": "Sugarcane requires deep sampling (30cm) to detect long-term nutrient reserves for deep roots.",
+            "depth_reason_kn": "ಕಬ್ಬಿಗೆ ಆಳವಾದ ಬೇರುಗಳ ಪೋಷಕಾಂಶಗಳ ಸಂಗ್ರಹವನ್ನು ಪತ್ತೆಹಚ್ಚಲು ಆಳವಾದ ಪರೀಕ್ಷೆ (30 ಸೆಂ.ಮೀ) ಅಗತ್ಯವಿದೆ.",
+            "insects": [
+                {
+                    "name": "Woolly Aphid",
+                    "name_kn": "ಉಣ್ಣೆ ನುಸಿ",
+                    "symptoms": "White cottony growth on the underside of leaves.",
+                    "symptoms_kn": "ಎಲೆಗಳ ಕೆಳಭಾಗದಲ್ಲಿ ಬಿಳಿ ಹತ್ತಿಯಂತಹ ಬೆಳವಣಿಗೆ.",
+                    "control": "Release Dipha aphidivora; Spray Dimethoate 1.7 ml/L.",
+                    "control_kn": "ಡಿಫಾ ಅಫಿಡಿವೋರಾವನ್ನು ಬಿಡುಗಡೆ ಮಾಡಿ; ಡೈಮೆಥೋಯೇಟ್ 1.7 ಮಿಲಿ/ಲೀ ಸಿಂಪಡಿಸಿ."
+                }
+            ],
+            "diseases": [
+                {
+                    "name": "Red Rot",
+                    "name_kn": "ಕೆಂಪು ಕೊಳೆ ರೋಗ",
+                    "symptoms": "Reddish discoloration inside the split cane with white spots.",
+                    "symptoms_kn": "ಸೀಳಿದ ಕಬ್ಬಿನ ಒಳಗೆ ಬಿಳಿ ಚುಕ್ಕೆಗಳೊಂದಿಗೆ ಕೆಂಪು ಬಣ್ಣದ ಬದಲಾವಣೆ.",
+                    "control": "Use healthy setts; Crop rotation; Drench with Carbendazim.",
+                    "control_kn": "ಆರೋಗ್ಯಕರ ಸಸಿಗಳನ್ನು ಬಳಸಿ; ಬೆಳೆ ಸರದಿ; ಕಾರ್ಬೆಂಡಾಜಿಮ್‌ನೊಂದಿಗೆ ಡ್ರೆಂಚಿಂಗ್ ಮಾಡಿ."
+                }
+            ]
+        },
+        {
+            "name": "Coconut",
+            "depth_reason": "Coconut is a deep-rooted perennial; 30cm depth is required to assess core soil health.",
+            "depth_reason_kn": "ತೆಂಗು ಆಳವಾದ ಬೇರುಬಿಡುವ ದೀರ್ಘಕಾಲಿಕ ಬೆಳೆಯಾಗಿದೆ; ಮುಖ್ಯ ಮಣ್ಣಿನ ಆರೋಗ್ಯವನ್ನು ನಿರ್ಣಯಿಸಲು 30 ಸೆಂ.ಮೀ ಆಳದ ಅಗತ್ಯವಿದೆ.",
+            "insects": [
+                {
+                    "name": "Rhinoceros Beetle",
+                    "name_kn": "ಕೊಂಬಿನ ಜೀರುಂಡೆ",
+                    "symptoms": "V-shaped cuts on leaves; holes in the crown.",
+                    "symptoms_kn": "ಎಲೆಗಳ ಮೇಲೆ ವಿ-ಆಕಾರದ ಕಟ್ಸ್; ಕಿರೀಟದಲ್ಲಿ ರಂಧ್ರಗಳು.",
+                    "control": "Apply 1:1 mixture of sand and Neem seed powder to leaf axils.",
+                    "control_kn": "ಎಲೆಗಳ ಅಕ್ಷಗಳಿಗೆ ಮರಳು ಮತ್ತು ಬೇವಿನ ಬೀಜದ ಪುಡಿಯ 1:1 ಮಿಶ್ರಣವನ್ನು ಅನ್ವಯಿಸಿ."
+                }
+            ],
+            "diseases": [
+                {
+                    "name": "Bud Rot",
+                    "name_kn": "ಸುಳಿ ಕೊಳೆ ರೋಗ",
+                    "symptoms": "Yellowing and withering of the innermost leaf.",
+                    "symptoms_kn": "ಒಳಗಿನ ಎಲೆಯು ಹಳದಿಯಾಗುವುದು ಮತ್ತು ಬಾಡುವುದು.",
+                    "control": "Remove infected tissues; Apply Bordeaux paste.",
+                    "control_kn": "ಸೋಂಕಿತ ಅಂಗಾಂಶಗಳನ್ನು ತೆಗೆದುಹಾಕಿ; ಬೋರ್ಡೆಕ್ಸ್ ಪೇಸ್ಟ್ ಅನ್ನು ಅನ್ವಯಿಸಿ."
+                }
+            ]
+        },
+        {
+            "name": "Arecanut",
+            "depth_reason": "Arecanut roots are mostly in the top 20cm; this depth is best for nutrient management.",
+            "depth_reason_kn": "ಅಡಿಕೆ ಬೇರುಗಳು ಹೆಚ್ಚಾಗಿ ಮೇಲ್ಭಾಗದ 20 ಸೆಂ.ಮೀ ನಲ್ಲಿರುತ್ತವೆ; ಪೋಷಕಾಂಶ ನಿರ್ವಹಣೆಗೆ ಈ ಆಳವು ಉತ್ತಮವಾಗಿದೆ.",
+            "insects": [
+                {
+                    "name": "Spindle Bug",
+                    "name_kn": "ಸ್ಪಿಂದಲ್ ಬುಗ್",
+                    "symptoms": "Drying and necrosis of newly emerged leaves.",
+                    "symptoms_kn": "ಹೊಸದಾಗಿ ಹೊರಬಂದ ಎಲೆಗಳು ಒಣಗುವುದು ಮತ್ತು ನೆಕ್ರೋಸಿಸ್.",
+                    "control": "Spray 2.5 ml of Phorate/L in the spindle.",
+                    "control_kn": "ಸ್ಪಿಂದಲ್‌ನಲ್ಲಿ 2.5 ಮಿಲಿ ಫೋರೇಟ್/ಲೀ ಸಿಂಪಡಿಸಿ."
+                }
+            ],
+            "diseases": [
+                {
+                    "name": "Fruit Rot (Koleroga)",
+                    "name_kn": "ಕೊಳೆ ರೋಗ",
+                    "symptoms": "Rotting and shedding of immature nuts.",
+                    "symptoms_kn": "ಅಪಕ್ವವಾದ ಅಡಿಕೆಗಳು ಕೊಳೆಯುವುದು ಮತ್ತು ಉದುರುವುದು.",
+                    "control": "Prophylactic spray of 1% Bordeaux mixture before monsoon.",
+                    "control_kn": "ಮಂಗಾರು ಮಳೆಗೆ ಮುನ್ನ 1% ಬೋರ್ಡೆಕ್ಸ್ ಮಿಶ್ರಣದ ರಕ್ಷಣಾತ್ಮಕ ಸಿಂಪಡಣೆ."
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "Tomato",
-      "name_kn": "ಟೊಮೇಟೊ",
-      "soil_depth_cm": 30,
-      "depth_reason": "Medium root depth; most nutrients absorbed from topsoil.",
-      "depth_reason_kn": "ಮಧ್ಯಮ ಬೇರು ಆಳ; ಹೆಚ್ಚಿನ ಪೋಷಕಾಂಶಗಳು ಮೇಲ್ಮಣ್ಣಿನಿಂದ ಹೀರಲ್ಪಡುತ್ತವೆ.",
-      "insects": [
-        {
-          "name": "Fruit Borer",
-          "name_kn": "ಹಣ್ಣು ಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Larvae bore circular holes in fruits. Fruits rot and drop.",
-          "symptoms_kn": "ಹುಳುಗಳು ಹಣ್ಣುಗಳಲ್ಲಿ ವೃತ್ತಾಕಾರದ ರಂಧ್ರಗಳನ್ನು ಮಾಡುತ್ತವೆ. ಹಣ್ಣುಗಳು ಕೊಳೆತು ಉದುರುತ್ತವೆ.",
-          "control": "Spray Spinosad 45 SC (0.3 ml/L) or Indoxacarb 14.5 SC.",
-          "control_kn": "ಸ್ಪಿನೋಸಾಡ್ 45 ಎಸ್‌ಸಿ (0.3 ಮಿ.ಲೀ/ಲೀ) ಅಥವಾ ಇಂಡಾಕ್ಸಾಕಾರ್ಬ್ 14.5 ಎಸ್‌ಸಿ ಸಿಂಪಡಿಸಿ."
-        },
-        {
-          "name": "Leaf Miner",
-          "name_kn": "ಎಲೆ ಸುರಂಗದ ಕೀಟ / ನಾಗಮುದ್ರೆ",
-          "symptoms": "Larvae mine into leaves creating snake-like white tunnels. Affects photosynthesis.",
-          "symptoms_kn": "ಹುಳುಗಳು ಎಲೆಗಳ ಒಳಗೆ ಸುರಂಗ ಮಾಡಿ ಹಾವಿನಂತಹ ಬಿಳಿ ಗೆರೆಗಳನ್ನು ಉಂಟುಮಾಡುತ್ತವೆ. ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆಗೆ ತೊಂದರೆಯಾಗುತ್ತದೆ.",
-          "control": "Spray Abamectin 1.9 EC (1 ml/L) or Cyantraniliprole.",
-          "control_kn": "ಅಬಮೆಕ್ಟಿನ್ 1.9 ಇಸಿ (1 ಮಿ.ಲೀ/ಲೀ) ಅಥವಾ ಸಯಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ ಸಿಂಪಡಿಸಿ."
-        }
-      ]
-    },
-    {
-      "name": "Sugarcane",
-      "name_kn": "ಕಬ್ಬು",
-      "soil_depth_cm": 45,
-      "depth_reason": "Deep-rooted crop with high nutrient and water requirement.",
-      "depth_reason_kn": "ಆಳವಾದ ಬೇರುಗಳುಳ್ಳ ಬೆಳೆ, ಹೆಚ್ಚಿನ ಪೋಷಕಾಂಶ ಮತ್ತು ನೀರಿನ ಅಗತ್ಯವಿದೆ.",
-      "insects": [
-        {
-          "name": "Early Shoot Borer",
-          "name_kn": "ಆದಿ ಸುಳಿ ಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Dead heart in young shoots (1-3 months crop). Shoots dry up and can be pulled out easily.",
-          "symptoms_kn": "ಎಳೆಯ ಸುಳಿಗಳಲ್ಲಿ (1-3 ತಿಂಗಳ ಬೆಳೆ) ಡೆಡ್ ಹಾರ್ಟ್ ಕಂಡುಬರುತ್ತದೆ. ಸುಳಿಗಳು ಒಣಗಿ ಸುಲಭವಾಗಿ ಎಳೆದು ಬರುತ್ತವೆ.",
-          "control": "Soil application of Chlorantraniliprole 0.4% G (7.5 kg/acre) or spray Chlorpyriphos.",
-          "control_kn": "ಮಣ್ಣಿಗೆ ಕ್ಲೋರಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 0.4% ಜಿ (7.5 ಕೆ.ಜಿ/ಎಕರೆ) ಹಾಕಿ ಅಥವಾ ಕ್ಲೋರ್‌ಪೈರಿಫಾಸ್ ಸಿಂಪಡಿಸಿ."
-        },
-        {
-          "name": "Woolly Aphid",
-          "name_kn": "ಬಿಳಿ ಉಣ್ಣೆ ಹೇನು",
-          "symptoms": "White woolly coating on leaves. Aphids suck sap, secrete honeydew causing sooty mold.",
-          "symptoms_kn": "ಎಲೆಗಳ ಮೇಲೆ ಬಿಳಿ ಉಣ್ಣೆಯಂತಹ ಪದರ. ಹೇನುಗಳು ರಸ ಹೀರುತ್ತವೆ, ಜೇನಿನಂತಹ ದ್ರವ ಸ್ರವಿಸಿ ಕಪ್ಪು ಶಿಲೀಂಧ್ರ ಬೆಳೆಯಲು ಕಾರಣವಾಗುತ್ತವೆ.",
-          "control": "Release predators like Dipha aphidivora or spray Acephate 75 SP.",
-          "control_kn": "ಡಿಫಾ ಅಫಿಡಿವೊರಾ ನಂತಹ ಪರಭಕ್ಷಕಗಳನ್ನು ಬಿಡಿ ಅಥವಾ ಅಸಿಫೇಟ್ 75 ಎಸ್‌ಪಿ ಸಿಂಪಡಿಸಿ."
-        }
-      ]
-    },
-    {
-      "name": "Ragi",
-      "name_kn": "ರಾಗಿ",
-      "soil_depth_cm": 30,
-      "depth_reason": "Medium rooting depth; depends strongly on surface nutrients.",
-      "depth_reason_kn": "ಮಧ್ಯಮ ಬೇರು ಆಳ; ಮೇಲ್ಮೈ ಪೋಷಕಾಂಶಗಳ ಮೇಲೆ ಹೆಚ್ಚು ಅವಲಂಬಿತವಾಗಿದೆ.",
-      "insects": [
-        {
-          "name": "Stem Borer",
-          "name_kn": "ಕಾಂಡ ಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Dead heart and white earhead symptoms similar to paddy.",
-          "symptoms_kn": "ಭತ್ತದಂತೆಯೇ ಸುಳಿ ಒಣಗುವುದು (ಡೆಡ್ ಹಾರ್ಟ್) ಮತ್ತು ಬಿಳಿ ತೆನೆ ಲಕ್ಷಣಗಳು.",
-          "control": "Spray Chlorpyriphos 20 EC (2 ml/L) or Dimethoate 30 EC.",
-          "control_kn": "ಕ್ಲೋರ್‌ಪೈರಿಫಾಸ್ 20 ಇಸಿ (2 ಮಿ.ಲೀ/ಲೀ) ಅಥವಾ ಡೈಮಿಥೋಯೇಟ್ 30 ಇಸಿ ಸಿಂಪಡಿಸಿ."
-        },
-        {
-          "name": "Earhead Caterpillar",
-          "name_kn": "ತೆನೆ ಕಾಯಿಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Webbing of earheads; larvae feed on developing grains inside the web.",
-          "symptoms_kn": "ತೆನೆಗಳ ಸುತ್ತ ಬಲೆ ಕಟ್ಟುತ್ತದೆ; ಹುಳುಗಳು ಬಲೆಯೊಳಗೆ ಬೆಳೆಯುವ ಕಾಳುಗಳನ್ನು ತಿನ್ನುತ್ತವೆ.",
-          "control": "Dust Malathion 5D (10 kg/acre) or spray Quinalphos.",
-          "control_kn": "ಮಾಲಾಥಿಯಾನ್ 5ಡಿ (10 ಕೆ.ಜಿ/ಎಕರೆ) ಧೂಳೀಕರಿಸಿ ಅಥವಾ ಕ್ವಿನಾಲ್‌ಫಾಸ್ ಸಿಂಪಡಿಸಿ."
-        }
-      ]
-    },
-    {
-      "name": "Matta Gulla",
-      "name_kn": "ಮಟ್ಟು ಗುಳ್ಳ",
-      "soil_depth_cm": 30,
-      "depth_reason": "Shallow to medium root system; nutrients absorbed mainly from topsoil.",
-      "depth_reason_kn": "ಆಳವಿಲ್ಲದ ಮಧ್ಯಮ ಬೇರು ವ್ಯವಸ್ಥೆ; ಪೋಷಕಾಂಶಗಳು ಮುಖ್ಯವಾಗಿ ಮೇಲ್ಮಣ್ಣಿನಿಂದ ಹೀರಲ್ಪಡುತ್ತವೆ.",
-      "insects": [
-        {
-          "name": "Shoot & Fruit Borer",
-          "name_kn": "ಕಾಂಡ ಮತ್ತು ಕಾಯಿ ಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Drooping of young shoots; holes in fruits filled with excreta.",
-          "symptoms_kn": "ಎಳೆಯ ಕಾಂಡಗಳು ಬಾಡುತ್ತವೆ; ಹಣ್ಣುಗಳಲ್ಲಿ ರಂಧ್ರಗಳು ಮತ್ತು ಮಲ ತುಂಬಿರುತ್ತದೆ.",
-          "control": "Remove affected shoots/fruits. Spray Emamectin Benzoate 5 SG (0.4 g/L).",
-          "control_kn": "ಬಾಧಿತ ಕಾಂಡ/ಹಣ್ಣುಗಳನ್ನು ತೆಗೆದುಹಾಕಿ. ಎಮಾಮೆಕ್ಟಿನ್ ಬೆಂಜೋಯೇಟ್ 5 ಎಸ್‌ಜಿ (0.4 ಗ್ರಾಂ/ಲೀ) ಸಿಂಪಡಿಸಿ."
-        },
-        {
-          "name": "Hadda Beetle",
-          "name_kn": "ಗುಲಗಂಜಿ ದಂಬಿ / ಹದ್ದ ಹುಳು",
-          "symptoms": "Grubs and adults scrape green matter from leaves in a characteristic manner (skeletonization).",
-          "symptoms_kn": "ಮರಿಗಳು ಮತ್ತು ಪ್ರಾಯದ ದಂಬಿಗಳು ಎಲೆಗಳ ಹಸಿರು ಭಾಗವನ್ನು ಕೆರೆದು ತಿನ್ನುತ್ತವೆ (ಜಾಲರಿಯಂತೆ ಕಾಣುತ್ತದೆ).",
-          "control": "Spray Carbaryl 50 WP (3 g/L) or Malathion.",
-          "control_kn": "ಕಾರ್ಬರಿಲ್ 50 ಡಬ್ಲ್ಯೂಪಿ (3 ಗ್ರಾಂ/ಲೀ) ಅಥವಾ ಮಾಲಾಥಿಯಾನ್ ಸಿಂಪಡಿಸಿ."
-        }
-      ]
-    },
-    {
-      "name": "Cotton",
-      "name_kn": "ಹತ್ತಿ",
-      "soil_depth_cm": 30,
-      "depth_reason": "Tap root goes deep, but nutrient uptake zone is top 30 cm.",
-      "depth_reason_kn": "ತಾಯಿ ಬೇರು ಆಳಕ್ಕೆ ಹೋಗುತ್ತದೆ, ಆದರೆ ಪೋಷಕಾಂಶ ಹೀರಿಕೊಳ್ಳುವ ವಲಯ ಮೇಲಿನ 30 ಸೆಂ.ಮೀ.",
-      "insects": [
-        {
-          "name": "Bollworms",
-          "name_kn": "ಕಾಯಿ ಕೊರೆಯುವ ಹುಳುಗಳು (ಬಾಲ್ ವರ್ಮ್)",
-          "symptoms": "Larvae bore into squares and bolls. Flare up of squares and shedding.",
-          "symptoms_kn": "ಹುಳುಗಳು ಮೊಗ್ಗು ಮತ್ತು ಕಾಯಿಗಳನ್ನು ಕೊರೆಯುತ್ತವೆ. ಮೊಗ್ಗುಗಳು ಅರಳುತ್ತವೆ ಮತ್ತು ಉದುರುತ್ತವೆ.",
-          "control": "Install pheromone traps. Spray Spinosad or Indoxacarb.",
-          "control_kn": "ಫೆರೋಮೋನ್ ಟ್ರ್ಯಾಪ್ ಅಳವಡಿಸಿ. ಸ್ಪಿನೋಸಾಡ್ ಅಥವಾ ಇಂಡಾಕ್ಸಾಕಾರ್ಬ್ ಸಿಂಪಡಿಸಿ."
-        },
-        {
-          "name": "Sucking Pests",
-          "name_kn": "ರಸ ಹೀರುವ ಕೀಟಗಳು (Jassids, Thrips, Aphids)",
-          "symptoms": "Curling of leaves, yellowing, and stunted growth.",
-          "symptoms_kn": "ಎಲೆಗಳು ಮುದುಡಿಕೊಳ್ಳುವುದು, ಹಳದಿಯಾಗುವುದು ಮತ್ತು ಕುಂಠಿತ ಬೆಳವಣಿಗೆ.",
-          "control": "Spray Imidacloprid 17.8 SL or Acetamiprid 20 SP.",
-          "control_kn": "ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ 17.8 ಎಸ್‌ಎಲ್ ಅಥವಾ ಅಸಿಟಾಮಿಪ್ರಿಡ್ 20 ಎಸ್‌ಪಿ ಸಿಂಪಡಿಸಿ."
-        }
-      ]
-    },
-    {
-      "name": "Coconut",
-      "name_kn": "ತೆಂಗು",
-      "soil_depth_cm": 50,
-      "depth_reason": "Feeder roots of this perennial crop are mainly in the upper 50 cm.",
-      "depth_reason_kn": "ಈ ದೀರ್ಘಕಾಲಿಕ ಬೆಳೆಯ ಪೋಷಕ ಬೇರುಗಳು ಮುಖ್ಯವಾಗಿ ಮೇಲಿನ 50 ಸೆಂ.ಮೀ. ನಲ್ಲಿರುತ್ತವೆ.",
-      "insects": [
-        {
-          "name": "Rhinoceros Beetle",
-          "name_kn": "ಕೊಂಬು ಕುರುವಾಯಿ / ಗಂಡು ಹುಳು",
-          "symptoms": "Bores into crown, cutting unopened leaves in V-shape.",
-          "symptoms_kn": "ಸುಳಿಯ ಭಾಗವನ್ನು ಕೊರೆಯುತ್ತದೆ, ಎಲೆಗಳನ್ನು 'V' ಆಕಾರದಲ್ಲಿ ಕತ್ತರಿಸುತ್ತದೆ.",
-          "control": "Place Naphthalene balls in leaf axils. Use hook to remove beetle.",
-          "control_kn": "ಎಲೆಗಳ ಸಂದಿಯಲ್ಲಿ ನ್ಯಾಫ್ತಲೀನ್ ಗುಳಿಗೆಗಳನ್ನು ಇಡಿ. ಕೊಂಡಿ ಬಳಸಿ ಹುಳವನ್ನು ತೆಗೆಯಿರಿ."
-        },
-        {
-          "name": "Red Palm Weevil",
-          "name_kn": "ಕೆಂಪು ಮೂತಿಯ ದಂಬಿ",
-          "symptoms": "Grubs bore into trunk. Oozing of brownish viscous liquid. Wilting of central shoot.",
-          "symptoms_kn": "ಮರಿಗಳು ಕಾಂಡವನ್ನು ಕೊರೆಯುತ್ತವೆ. ಕಂದು ಬಣ್ಣದ ದ್ರವ ಸೋರುತ್ತದೆ. ಸುಳಿ ಬಾಡುತ್ತದೆ.",
-          "control": "Root feeding with Monocrotophos (10 ml + 10 ml water).",
-          "control_kn": "ಮೊನೊಕ್ರೊಟೊಫಾಸ್ (10 ಮಿ.ಲೀ + 10 ಮಿ.ಲೀ ನೀರು) ನೊಂದಿಗೆ ಬೇರು ಮೂಲಕ ಔಷಧ ನೀಡಿ."
-        }
-      ]
-    },
-    {
-      "name": "Arecanut",
-      "name_kn": "ಅಡಿಕೆ",
-      "soil_depth_cm": 45,
-      "depth_reason": "Fibrous root system; nutrient absorption mostly from upper layers.",
-      "depth_reason_kn": "ನಾರಿನ ಬೇರು ವ್ಯವಸ್ಥೆ; ಪೋಷಕಾಂಶ ಹೀರಿಕೊಳ್ಳುವಿಕೆ ಹೆಚ್ಚಾಗಿ ಮೇಲಿನ ಪದರಗಳಿಂದ.",
-      "insects": [
-        {
-          "name": "Mites",
-          "name_kn": "ನುಶಿ (ಕೆಂಪು ಮತ್ತು ಬಿಳಿ)",
-          "symptoms": "Yellowing of leaves, poor nut development.",
-          "symptoms_kn": "ಎಲೆಗಳು ಹಳದಿಯಾಗುವುದು, ಕಾಯಿಗಳ ಬೆಳವಣಿಗೆ ಕುಂಠಿತ.",
-          "control": "Spray Dicofol 18.5 EC (2.5 ml/L) or wettable sulphur.",
-          "control_kn": "ಡೈಕೋಫಾಲ್ 18.5 ಇಸಿ (2.5 ಮಿ.ಲೀ/ಲೀ) ಅಥವಾ ನೀರಿನಲ್ಲಿ ಕರಗುವ ಗಂಧಕ ಸಿಂಪಡಿಸಿ."
-        },
-        {
-          "name": "Spindle Bug",
-          "name_kn": "ಸುಳಿ ತಿಗಣೆ",
-          "symptoms": "Sucks sap from spindle and young leaves. Brown necrotic spots.",
-          "symptoms_kn": "ಸುಳಿ ಮತ್ತು ಎಳೆಯ ಎಲೆಗಳಿಂದ ರಸ ಹೀರುತ್ತದೆ. ಕಂದು ಬಣ್ಣದ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
-          "control": "Place Phorate 10G granules in leaf axils.",
-          "control_kn": "ಎಲೆಗಳ ಸಂದಿಯಲ್ಲಿ ಫೋರೇಟ್ 10ಜಿ ಹರಳುಗಳನ್ನು ಇಡಿ."
-        }
-      ]
-    },
-    {
-      "name": "Coffee",
-      "name_kn": "ಕಾಫಿ",
-      "soil_depth_cm": 30,
-      "depth_reason": "Shallow feeder roots; soil fertility in topsoil is critical.",
-      "depth_reason_kn": "ಆಳವಿಲ್ಲದ ಪೋಷಕ ಬೇರುಗಳು; ಮೇಲ್ಮಣ್ಣಿನ ಫಲವತ್ತತೆ ನಿರ್ಣಾಯಕವಾಗಿದೆ.",
-      "insects": [
-        {
-          "name": "Coffee Berry Borer",
-          "name_kn": "ಕಾಫಿ ಕಾಯಿ ಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Beetles bore into berries near navel region. Bean damage.",
-          "symptoms_kn": "ದಂಬಿಗಳು ಕಾಯಿಗಳ ಹೊಕ್ಕಳ ಭಾಗದಲ್ಲಿ ರಂಧ್ರ ಮಾಡುತ್ತವೆ. ಬೀಜಗಳು ಹಾಳಾಗುತ್ತವೆ.",
-          "control": "Clean harvest. Spray Chlorpyriphos 20 EC or Beauveria bassiana.",
-          "control_kn": "ಸ್ವಚ್ಛ ಕೊಯ್ದು ಮಾಡಿ. ಕ್ಲೋರ್‌ಪೈರಿಫಾಸ್ 20 ಇಸಿ ಅಥವಾ ಬ್ಯುವೇರಿಯಾ ಬಾಸಿಯಾನಾ ಸಿಂಪಡಿಸಿ."
-        },
-        {
-          "name": "White Stem Borer",
-          "name_kn": "ಬಿಳಿ ಕಾಂಡ ಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Grubs tunnel into stem/roots. Ridges on stem, yellowing of leaves.",
-          "symptoms_kn": "ಮರಿಗಳು ಕಾಂಡ/ಬೇರುಗಳಲ್ಲಿ ಸುರಂಗ ಮಾಡುತ್ತವೆ. ಕಾಂಡದ ಮೇಲೆ ಉಬ್ಬುಗಳು, ಎಲೆಗಳು ಹಳದಿಯಾಗುವುದು.",
-          "control": "Trace and burn infested plants. Swab stem with Chlorpyriphos.",
-          "control_kn": "ಬಾಧಿತ ಗಿಡಗಳನ್ನು ಗುರುತಿಸಿ ಸುಡಿ. ಕಾಂಡಕ್ಕೆ ಕ್ಲೋರ್‌ಪೈರಿಫಾಸ್ ಲೇಪನ ಮಾಡಿ."
-        }
-      ]
-    },
-    {
-      "name": "Jasmine",
-      "name_kn": "ಮಲ್ಲಿಗೆ",
-      "soil_depth_cm": 30,
-      "depth_reason": "Shallow to medium roots; responds strongly to surface nutrients.",
-      "depth_reason_kn": "ಆಳವಿಲ್ಲದ ಮಧ್ಯಮ ಬೇರುಗಳು; ಮೇಲ್ಮೈ ಪೋಷಕಾಂಶಗಳಿಗೆ ಚೆನ್ನಾಗಿ ಸ್ಪಂದಿಸುತ್ತದೆ.",
-      "insects": [
-        {
-          "name": "Bud Worm",
-          "name_kn": "ಮೊಗ್ಗು ಕೊರೆಯುವ ಹುಳು",
-          "symptoms": "Larvae bore into buds and eat inner contents. Flowers turn pinkish.",
-          "symptoms_kn": "ಹುಳುಗಳು ಮೊಗ್ಗುಗಳನ್ನು ಕೊರೆದು ಒಳಗಿನ ಭಾಗವನ್ನು ತಿನ್ನುತ್ತವೆ. ಹೂವುಗಳು ಕೆಂಪು ಬಣ್ಣಕ್ಕೆ ತಿರುಗುತ್ತವೆ.",
-          "control": "Spray Thiodicarb 75 WP or Spinosad.",
-          "control_kn": "ಥಿಯೋಡಿಕಾರ್ಬ್ 75 ಡಬ್ಲ್ಯೂಪಿ ಅಥವಾ ಸ್ಪಿನೋಸಾಡ್ ಸಿಂಪಡಿಸಿ."
-        },
-        {
-          "name": "Red Spider Mite",
-          "name_kn": "ಕೆಂಪು ಜೇಡರ ನುಶಿ",
-          "symptoms": "Webbing on under surface of leaves. Yellow mottling.",
-          "symptoms_kn": "ಎಲೆಗಳ ಅಡಿಯಲ್ಲಿ ಬಲೆ ಕಟ್ಟುತ್ತದೆ. ಹಳದಿ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
-          "control": "Spray Dicofol or Propargite.",
-          "control_kn": "ಡೈಕೋಫಾಲ್ ಅಥವಾ ಪ್ರೊಪಾರ್ಗೈಟ್ ಸಿಂಪಡಿಸಿ."
-        }
-      ]
-    }
-  ]
+    ]
 }

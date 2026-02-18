@@ -26,6 +26,10 @@ public class LiveSoilTestingActivity extends AppCompatActivity {
     private String selectedCrop;
     private int selectedDepth;
 
+    // TO MANIPULATE VALUES ACROSS DEVICES:
+    // Set the same SEED_OFFSET on both devices and they will show the same values!
+    private static final long SEED_OFFSET = 12345; 
+
     private int[] sensorStringIds = {
             R.string.sensor_temp,
             R.string.sensor_moisture,
@@ -85,8 +89,12 @@ public class LiveSoilTestingActivity extends AppCompatActivity {
         tvName.setText(getString(sensorStringIds[index]));
         sensorContainer.addView(view);
 
-        // Animate values
-        Random random = new Random();
+        // Deterministic Sync Logic: 
+        // Syncs every 30 seconds (30000ms)
+        long timeWindow = System.currentTimeMillis() / 30000;
+        long seed = timeWindow + SEED_OFFSET + index; // index ensures different sensors have different values
+        Random random = new Random(seed);
+
         final int targetValue;
         if (index == 2) targetValue = 55 + random.nextInt(20); // pH 5.5 - 7.5
         else if (index == 0) targetValue = 20 + random.nextInt(15); // Temp
